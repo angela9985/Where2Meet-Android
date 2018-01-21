@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayoutFragment"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- ListRow Left sied Thumbnail image -->
+
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip"
+        android:padding="3dip"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/start_image"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/start" />
+    </LinearLayout>
+
+    <!-- Name of ATM -->
+    <TextView
+        android:id="@+id/word_place_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="place 1:"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/place_1"
+        android:layout_alignBottom="@+id/place_1"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toEndOf="@+id/thumbnail" />
+
+    <TextView
+        android:id="@+id/word_place_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="place 2:"
+        android:textSize="20sp"
+        android:layout_alignBaseline="@+id/place_2"
+        android:layout_alignBottom="@+id/place_2"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:layout_toEndOf="@+id/thumbnail" />
+
+
+    <EditText
+        android:id="@+id/place_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:textColor="#040404"
+        android:textSize="20dip"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:layout_toRightOf="@+id/word_place_1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <!-- Location -->
+
+    <EditText
+        android:id="@+id/place_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/place_1"
+        android:layout_marginTop="1dip"
+        android:textColor="#343434"
+        android:textStyle="bold"
+        android:textSize="20dip"
+        android:layout_toRightOf="@+id/word_place_2"
+        android:layout_toEndOf="@+id/word_place_2" />
+
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.angela.googlemapapi.MapsActivity"
+    android:layout_below="@id/place_2"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" />
+</RelativeLayout>
